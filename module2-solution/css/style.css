@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    position: relative;
+}
+
+/* Стили для заголовка секции */
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f8f9fa;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Стили для десктопа */
+@media (min-width: 992px) {
+    .section {
+        width: 30%;
+        float: left;
+    }
+}
+
+/* Стили для планшета */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+        float: left; 
+    }
+    .section:nth-child(3) {
+        width: 100%; 
+        float: none; 
+    }
+}
+
+/* Мобильные стили */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        float: none;
+    }
+}
